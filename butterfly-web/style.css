@@ -3,3 +3,13 @@
 /* Actualización de identidad visual */
 html{scroll-padding-top:125px}body{font-size:20px}header{padding:12px 5%;gap:24px}.brand{display:flex;align-items:center;flex-shrink:0}.brand img{display:block;height:88px;width:auto}.footer-logo{height:110px;width:auto}nav{font-size:18px;gap:clamp(12px,1.5vw,24px);flex-wrap:wrap;justify-content:flex-end}.eyebrow{font-size:16px}h1{font-size:clamp(44px,6.3vw,100px)}h2{font-size:clamp(36px,4.3vw,64px)}h3{font-size:28px}.note,.pending{font-size:16px}button{font:inherit}.hero,.intro{position:relative;isolation:isolate}.hero::before,.intro::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('assets/conexiones.png') center/cover no-repeat;opacity:.13}.intro::before{opacity:.09}.hero>img{position:relative}.hero>div{min-width:0} .hero h1{overflow-wrap:anywhere}
 @media(max-width:1000px){nav{font-size:16px;gap:12px}}@media(max-width:800px){html{scroll-padding-top:90px}body{font-size:18px}.brand img{height:64px}nav{font-size:18px;align-items:flex-start}.eyebrow{font-size:13px}h1{font-size:clamp(36px,8vw,64px)}h2{font-size:clamp(30px,6vw,46px)}h3{font-size:25px}.hero::before{background-size:auto 100%;opacity:.10}.footer-logo{height:90px}}
+
+/* V3: continuidad gráfica y producto sin fondo */
+.hero>img{width: min(78%, 460px); max-height:540px; object-fit:contain; justify-self:center; border:0; border-radius:0; background:transparent; box-shadow:none;}
+.hero h1{line-height:1.02}
+.intro{overflow:hidden;min-height:420px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.intro::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('assets/logo.png') right 5% center / auto min(85%, 500px) no-repeat;opacity:.08}
+main>section:not(.hero):not(.intro),footer{position:relative;isolation:isolate;overflow:hidden}
+main>section:not(.hero):not(.intro)::before,footer::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('assets/conexiones.png') right bottom / min(100%, 1050px) auto no-repeat;opacity:.07}
+main>section:nth-of-type(even):not(.intro)::before{background-position:left top}
+@media(max-width:800px){.hero>img{width:min(65%,300px);max-height:350px}.intro{min-height:0}.intro::after{background-position:center;background-size:auto 80%;opacity:.06}main>section:not(.hero):not(.intro)::before{background-size:auto 75%;opacity:.05}}
